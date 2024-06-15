@@ -1,0 +1,258 @@
+body {
+    margin: 0px;
+    padding: 0px;
+    height: 100vh;
+    width: 100vw;
+    
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 100ch 1fr;
+  
+    font-family: 'Courier New', Courier, monospace;
+    overflow-x: hidden;
+  }
+  
+  header {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    position: relative;
+    height: 80px;
+  }
+  
+  header h1 {
+    margin: 0px;
+    margin-top: 10px;
+    margin-bottom: -20px;
+  }
+  
+  footer {
+    background-color: #4682b4;
+    color: white;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    height: 80px;
+  }
+  
+  main {
+    background-color: #f0f0f0;
+    padding: 2rem;
+    width: 80%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    overflow-y: auto;
+    scrollbar-width: none;
+  }
+  
+  .main-header {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: #4682b4;
+    height: 100%;
+  }
+  
+  .header-form {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .submit-header-form {
+    position: absolute;
+    left: 1260px;
+    background-color: #FFFFFF;
+    border: 0px;
+  }
+  
+  .header-input {
+    width: 35%;
+    height: 45%;
+  
+    border: 0px;
+    border-radius: 5px;
+    padding-left: 20px;
+    font-size: 120%;
+  }
+  
+  
+  .filter-qtd {
+    position: relative;
+    background-color: #ffffff;
+    width: 20px;
+    height: 20px;
+    right: 110px;
+    top: 35px;
+    border-radius: 50%;
+    cursor: default;
+    color: #4682b4;
+  }
+  
+  .search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 0.5rem 2.5rem 0.5rem 1rem;
+    font-size: 1rem;
+    border-radius: 2rem;
+    border: 1px solid #ccc;
+  }
+  
+  .search-container button {
+    position: absolute;
+    right: 10px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+  
+  .filter-icon {
+    position: absolute;
+    right: 120px;
+    top: 73%;
+    cursor: pointer;
+    z-index: 1;
+  
+  }
+  
+  .filter-count {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: red;
+    color: white;
+    border-radius: 50%;
+    padding: 0.2rem 0.5rem;
+  }
+  
+  dialog {
+    border: none;
+    border-radius: 8px;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative;
+  }
+  
+  .close-dialog {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    font-size: 1.2rem;
+    border: 2px solid #6a0606;
+    background-color: #c14747;
+    color: #FFFFFF;
+    border-radius: 5px;
+  }
+  
+  .apply-dialog {
+    position: absolute;
+    top: 290px;
+    right: 190px;
+    cursor: pointer;
+    background: none;
+    border: 2px solid #066a09;
+    background-color: #47c14b;
+    color: #FFFFFF;
+    border-radius: 5px;
+    font-size: 1.2rem;
+  }
+  
+  .filters-form {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+    height: 300px;
+    gap: 1rem;
+  }
+  
+  .news-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    justify-items: center;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .news-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: white;
+    width: 1000px;
+  
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .news-item img {
+    max-width: 500px;
+    height: auto;
+    border-radius: 8px;
+    border: 2px solid black;
+  }
+  
+  .news-item h2 {
+    width: 500px;
+    margin: 0.5rem 0;
+  }
+  
+  .news-item p {
+    width: 500px;
+    margin: 0.5rem 0;
+  }
+  
+  .news-item time {
+    font-size: 0.875rem;
+    color: #666;
+  }
+  
+  .news-item button {
+    background-color: #4682b4;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+  }
+  
+  .news-item button:hover {
+    background-color: #366fa0;
+  }
+  
+  .pagination {
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+    justify-content: center;
+    gap: 15px;
+  }
+  
+  .pagination li button {
+    background-color: #FFFFFF;
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    border: 2px solid black;
+  }
+  
+  #active {
+    background-color: #4682b4;
+    color: white;
+  }
