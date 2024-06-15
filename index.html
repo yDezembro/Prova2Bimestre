@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="prova.css">
+    <title>Prova Segundo Bimestre</title>
+  </head>
+  
+  <body>
+    <header>
+      <h1>Portal de Notícias do IBGE</h1>
+      <div class="main-header">
+        <form class="header-form" action>
+          <input class="header-input" placeholder="Pesquisar notícia por termo..." name="busca" type="text">
+          <button class="submit-header-form" type="submit">🔍</button>
+        </form>
+          <svg
+            class="filter-icon"
+            width="20"
+            height="20"
+            fill="#f0f0f0"
+            viewBox="0 0 80 90"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg">
+            <path d="m 0,0 30,45 0,30 10,15 0,-45 30,-45 Z"></path>
+          </svg>
+          <div class="filter-qtd"></div>
+      </div>
+    </header>
+
+    <main>
+      <ul class="news-list" id="news-list">
+        
+      </ul>
+    </main>
+    <ul class="pagination"></ul>
+    <footer></footer>
+
+    <dialog id="filter-dialog">
+      <form class="filters-form" action="/">
+        <label for="type">Tipo:</label>
+        <select id="type" name="tipo">
+          <option value="noticia">Notícias</option>
+          <option value="release">Releases</option>
+        </select>
+        
+        <label for="quantity">Quantidade:</label>
+        <select id="quantity" name="qtd">
+          <option value="5">5</option>
+          <option value="10" selected>10</option>
+          <option value="15">15</option>
+          <option value="20">20</option>
+          <option value="25">25</option>
+          <option value="30">30</option>
+        </select>
+        
+        <label for="from">De:</label>
+        <input type="date" id="from" name="de">
+        
+        <label for="to">Até:</label>
+        <input type="date" id="to" name="ate">
+        
+        <button class="close-dialog">✖</button>
+        <button type="submit" class="apply-dialog">Aplicar</button>
+      </form>
+    </dialog>
+    <script src="./prova.js"></script>
+  </body>
+</html>
